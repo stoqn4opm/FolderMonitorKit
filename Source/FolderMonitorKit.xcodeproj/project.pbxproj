@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2302788D252205930090CA63 /* FileManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302788C252205930090CA63 /* FileManager+Helper.swift */; };
 		23CA9BD5251C9F5C00B0D124 /* FolderMonitorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 23CA9BD3251C9F5C00B0D124 /* FolderMonitorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23CA9BDE251C9F7E00B0D124 /* FolderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA9BDD251C9F7E00B0D124 /* FolderMonitor.swift */; };
 		23CA9C05251CAD8900B0D124 /* FolderMonitor+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CA9C04251CAD8900B0D124 /* FolderMonitor+Delegate.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2302788C252205930090CA63 /* FileManager+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helper.swift"; sourceTree = "<group>"; };
 		23CA9BD0251C9F5C00B0D124 /* FolderMonitorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FolderMonitorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CA9BD3251C9F5C00B0D124 /* FolderMonitorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderMonitorKit.h; sourceTree = "<group>"; };
 		23CA9BD4251C9F5C00B0D124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +37,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2302788A252205750090CA63 /* Folder Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				23CA9BDD251C9F7E00B0D124 /* FolderMonitor.swift */,
+				23CA9C08251CB35300B0D124 /* FolderMonitor+Error.swift */,
+				23CA9C04251CAD8900B0D124 /* FolderMonitor+Delegate.swift */,
+				23CA9C06251CADC300B0D124 /* FolderMonitor+Notifications.swift */,
+			);
+			path = "Folder Monitor";
+			sourceTree = "<group>";
+		};
+		2302788B252205800090CA63 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2302788C252205930090CA63 /* FileManager+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		23CA9BC6251C9F5C00B0D124 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				23CA9BD3251C9F5C00B0D124 /* FolderMonitorKit.h */,
-				23CA9BDD251C9F7E00B0D124 /* FolderMonitor.swift */,
-				23CA9C08251CB35300B0D124 /* FolderMonitor+Error.swift */,
-				23CA9C04251CAD8900B0D124 /* FolderMonitor+Delegate.swift */,
-				23CA9C06251CADC300B0D124 /* FolderMonitor+Notifications.swift */,
+				2302788A252205750090CA63 /* Folder Monitor */,
+				2302788B252205800090CA63 /* Helpers */,
 				23CA9BD4251C9F5C00B0D124 /* Info.plist */,
 			);
 			path = FolderMonitorKit;
@@ -148,6 +167,7 @@
 				23CA9C09251CB35300B0D124 /* FolderMonitor+Error.swift in Sources */,
 				23CA9C05251CAD8900B0D124 /* FolderMonitor+Delegate.swift in Sources */,
 				23CA9C07251CADC300B0D124 /* FolderMonitor+Notifications.swift in Sources */,
+				2302788D252205930090CA63 /* FileManager+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
