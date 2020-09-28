@@ -1,6 +1,3 @@
-
-
-
 # FolderMonitorKit
 ![](https://img.shields.io/badge/version-1.0-brightgreen.svg)
 
@@ -86,6 +83,39 @@ extension NSNotification.Name {
 
     /// Posted when a `FolderMonitor` observes a change in the folder that is monitoring. The object of the notification is the monitor that just observed a change.
     public static let folderMonitorObservedChange: Notification.Name
+}
+```
+
+In addition to monitoring changes in directories, the dynamic framework also contains userful extensions for `FileManager` class from `Foundation` giving you the ability to check easily the disk usage.
+
+```swift
+
+// MARK: - Disk Space Formatters
+
+extension FileManager {
+
+    /// Gives back the total disk space on this device as byte count formatted string.
+    public var totalDiskSpace: String { get }
+
+    /// Gives back the free disk space on this device as byte count formatted string.
+    public var freeDiskSpace: String { get }
+
+    /// Gives back the used disk space on this device as byte count formatted string.
+    public var usedDiskSpace: String { get }
+}
+
+// MARK: - Disk Space Calculation
+
+extension FileManager {
+
+    /// Gives back the amount of used disk space in bytes.
+    public var usedDiskSpaceInBytes: Int64 { get }
+
+    /// Calculates the free disk space in bytes.
+    public var freeDiskSpaceInBytes: Int64 { get }
+
+    /// Gives you back the total disk space in bytes.
+    public var totalDiskSpaceInBytes: Int64 { get }
 }
 ```
 
