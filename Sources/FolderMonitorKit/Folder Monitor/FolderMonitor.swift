@@ -84,7 +84,7 @@ extension FolderMonitor {
     /// Starts listening for changes to the directory (if we are not already).
     /// Don't forget to call `stop()` when you are done monitoring.
     ///
-    /// - Throws: Will throw if the directory that we are trying to monitor dissapeared.
+    /// - Throws: Will throw if the directory that we are trying to monitor disappeared.
     public func start() throws {
         
         guard FileManager.default.fileExists(atPath: url.path) else { throw Error.directoryDoesNotExist("[FolderMonitor] the given path: \(url.path) does not exist on the file system.") }
@@ -93,7 +93,7 @@ extension FolderMonitor {
         // Open the directory referenced by URL for monitoring only.
         monitoredFolderFileDescriptor = open(url.path, O_EVTONLY)
         
-        // Define a dispatch source monitoring the directory for additions, deletions, and renamings.
+        // Define a dispatch source monitoring the directory for additions, deletions, and renaming.
         dispatchSource = DispatchSource.makeFileSystemObjectSource(fileDescriptor: monitoredFolderFileDescriptor, eventMask: trackingEvent, queue: monitorQueue)
         
         // Define the block to call when a file change is detected.
