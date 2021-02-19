@@ -121,6 +121,11 @@ extension FileManager {
 
 # Installation
 
+### Swift Package Manager
+1. Navigate to `XCode project` > `ProjectName` > `Swift Packages` > `+ (add)`
+2. Paste the url `https://github.com/stoqn4opm/FolderMonitorKit.git`
+3. Select the needed targets.
+
 ### Carthage Installation
 
 1. In your `Cartfile` add `github "stoqn4opm/FolderMonitorKit"`
